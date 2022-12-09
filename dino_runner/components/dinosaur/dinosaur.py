@@ -7,6 +7,7 @@ SHIELD_TYPE,
 DUCKING_SHIELD, 
 RUNNING_SHIELD, 
 JUMPING_SHIELD)
+#JUMP_SOUND
 from pygame.sprite import Sprite
 
 class Dinosaur(Sprite):
@@ -29,6 +30,7 @@ class Dinosaur(Sprite):
         self.dino_duck = False
         self.dino_jump = False
         self.jump_vel = self.JUMP_VEL
+        #self.jump_sound = JUMP_SOUND
         self.setup_state_booleans()
 
     def setup_state_booleans(self):

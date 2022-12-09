@@ -73,3 +73,11 @@ DEFAULT_TYPE = "default"
 
 HEART_COUNT = 4
 SHIELD_TYPE = "shield"
+
+# SOUNDS
+
+#JUMP_SOUND = pygame.mixer.Sound("assets/sounds/smb_jump-super.wav")
+
+#HURT_SOUND = pygame.mixer.Sound("assets/sounds/hurt.wav")
+
+#DEATH_SOUND = pygame.mixer.Sound("assets/Sounds/gameover.wav") 

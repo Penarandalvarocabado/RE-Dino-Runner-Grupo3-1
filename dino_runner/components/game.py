@@ -1,10 +1,11 @@
 import pygame 
 from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 from dino_runner.components.dinosaur.dinosaur import Dinosaur
-from dino_runner.components.obstacle.obstacleManager import ObstacleManager
+from dino_runner.components.obstacles.obstacleManager import ObstacleManager
 from dino_runner.components.score_menu.text_utils import *
 from dino_runner.components.player_hearts.player_heart_manager import PlayerHeartManager
 from dino_runner.components.powerups.power_up_manager import PowerUpManager
+#from dino_runner.utils import text_utils
 
 class Game:
     def __init__(self):
@@ -20,6 +21,7 @@ class Game:
         self.player = Dinosaur()
         self.obstacle_manager = ObstacleManager()
         self.points = 0
+        #self.music = 0
         self.running = True
         self.death_count = 0
         self.player_heart_manager = PlayerHeartManager()
@@ -38,6 +40,12 @@ class Game:
             self.draw()
         # pygame.quit()
 
+    #def excute(self):
+        #self.play_music()
+        #while self.game_running:
+            #if not self.playing:
+                #self.show_menu
+
     def events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -52,7 +60,7 @@ class Game:
 
     def draw(self):
         self.clock.tick(FPS)
-        self.screen.fill((255, 255, 255))
+        self.screen.fill((0, 255, 127))
         self.draw_background()
         self.player.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
@@ -116,3 +124,15 @@ class Game:
                 exit()
             if event.type == pygame.KEYDOWN:
                 self.run()
+
+    #def play_music(self):
+        #if self.music == 0:
+            #pygame.mixer.music.load("assets/sounds/OST-23.mp3")
+            #pygame.mixer.music.play(-1)
+            #pygame.mixer.music.set_volume(0.15)
+        #elif self.music == 1:
+            #pygame.mixer.music.load("assets/sounds/01-Running-About.mp3")
+            #pygame.mixer.music.play(-1)
+            #pygame.mixer.music.set_volume(0.5)
+            #if self.death_count == 4:
+                #pygame.mixer.music.top()
