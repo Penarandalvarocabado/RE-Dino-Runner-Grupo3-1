@@ -19,3 +19,4 @@ class PlayerHeartManager:
 
     def resert_hearts(self):
         self.heart_count = HEART_COUNT
+        
