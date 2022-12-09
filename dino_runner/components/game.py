@@ -135,4 +135,4 @@ class Game:
             #pygame.mixer.music.play(-1)
             #pygame.mixer.music.set_volume(0.5)
             #if self.death_count == 4:
-                #pygame.mixer.music.top()
+                #pygame.mixer.music.stop()
